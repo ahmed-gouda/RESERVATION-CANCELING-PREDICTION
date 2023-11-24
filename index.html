@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> RESERVATION CANCELING PREDICTION</title>
+    <!-- Add your stylesheets or other head elements here -->
+</head>
+
+<body>
+    <div class="login">
+        <h1>RESERVATION CANCELING PREDICTION</h1>
+
+        
+
+        <!-- Display the input values -->
+       
+
+
+
+            <h2>Input Values:</h2>
+		<form action="{{ url_for('predict')}}"method="post">
+	 	<input type="text" name='Booking_ID' placeholder='Booking_ID' required="required" />
+	 	<input type="text" name="Number of Adults" placeholder="Number of Adults" required="required" />
+		<input type="text" name='number of children' placeholder='number of children' required="required" />
+	      	<input type="text" name='number of weekend nights' placeholder='number of weekend nights' required="required" />
+		<input type="text" name='number of week nights' placeholder='number of week nights' required="required" />
+	    	<input type="text" name='type of meal' placeholder='type of meal' required="required" />
+		<input type="text" name='car parking space' placeholder='car parking space' required="required" />
+	    	<input type="text" name='room type' placeholder='room type' required="required" />
+		<input type="text" name='lead time' placeholder='lead time' required="required" />
+	    	<input type="text" name='market segment type' placeholder='market segment type' required="required" />
+
+		<input type="text" name='repeated' placeholder='repeated' required="required" />
+	    	<input type="text" name='P-C' placeholder='P-C' required="required" />
+		<input type="text" name='P-not-C' placeholder='P-not-C' required="required" />
+	    	<input type="text" name='average price' placeholder='average price' required="required" />
+		<input type="text" name='special requests' placeholder='special requests' required="required" />
+	    	<input type="text" name='date of reservation' placeholder='date of reservation' required="required" />
+		<br>
+		<br>
+   	     <br>
+              <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    		</form>
+
+             <br>
+   	     <br>
+   		{{ prediction_text }}
+        </div>
+
+        \</body>
+
+</html>
